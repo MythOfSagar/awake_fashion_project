@@ -62,13 +62,14 @@ const Navbar = () => {
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               color={"black"}
               fontWeight={600}
-              fontSize={{ base: "20px", md: "2xl" }}
+              fontSize={{ base: "16.5px", md: "2xl" }}
               borderRadius={"5px"}
-              px={2}
+              px={{ base: 1, md: 2 }}
               bgGradient="linear-gradient(21deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
+              mr={{ base: "6px", md: "0px" }}
             >
               Awake Fashion
             </Text>
@@ -88,14 +89,9 @@ const Navbar = () => {
         </Flex>
 
         <Stack
-          // flex={{ base: 1, md: 0 }}
-          // justify={"flex-end"}
           direction={"row"}
-          spacing={{ base: 2, md: 6 }}
+          spacing={{ base: 1, md: 6 }}
           display={"flex"}
-          // flexDirection={"row"}
-          // gap={4}
-          // textAlign={"center"}
           justifyContent={"center"}
           alignItems={"center"}
         >
