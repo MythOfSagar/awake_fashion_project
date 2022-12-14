@@ -164,6 +164,7 @@ const Womens = () => {
 
         </div>
         <div className='trendybottom' >
+            <h3>Trendy Bottom Wear</h3>
             <div>
                 <div className='bottom' style={{backgroundImage:'url(https://tse4.mm.bing.net/th?id=OIP.8dZ5rPg86R5k_b3IDnaW7AHaHa&pid=Api&P=0)'}}>
                     <p>Jeans and jeggings</p>
@@ -183,6 +184,111 @@ const Womens = () => {
                 <div className='bottom' style={{backgroundImage:'url(https://tse4.mm.bing.net/th?id=OIP.5Mbni6jKVdcVNj_Up39iRQHaHa&pid=Api&P=0)'}}>
                     <p>Ethnic pants & Palazzos</p>
                 </div>
+            </div>
+        </div>
+        <div className='shopbycategory'>
+            <h3>Shop By Category</h3>
+            <div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://tse3.mm.bing.net/th?id=OIP.9T2H0lY26i2YKSCNrpYoyAHaJ4&pid=Api&P=0)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.Pw%2bHMI4keDFEbQ474C474&o=5&pid=21.1&w=&h=)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.ijxrATNBQ8mFew474C474&o=5&pid=21.1&w=&h=)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.cu0Z7aUty1U3xQ474C474&o=5&pid=21.1&w=&h=)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://tse1.mm.bing.net/th?id=OIP.zICg9APLrr8OdaMruWdO7AHaJT&pid=Api&P=0)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                <div>
+                    <div className='bottom' style={{backgroundImage:'url(https://tse2.mm.bing.net/th?id=OIP.FMfBFW0eLdksxTpHiT9-mQHaLH&pid=Api&P=0)'}}>
+                    </div>                    
+                    <p>Tops & TEES</p>
+                    <p>From ₹299</p>
+                </div>
+                
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Activewear Essentials</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-A-Women-13Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-B-Women-13Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-C-Women-06Sep2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Most Loved Winterwear Styles</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-A-Women-09Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-B-Women-09Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-C-Women-12Dec2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Curated For You</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-A-01Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-B-01Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-C-01Dec2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Trendsetters</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-A-Women-06Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-B-Women-06Dec2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-C-Women-06Dec2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Wardrobe Essentials</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-A-Women-12Sept2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-B-Women-06Sep2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-C-Women-06Sep2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Editor's Curated List</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-A-Women-08April2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-B-Women-08April2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-C-Women-08April2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='bestseller'>
+            <h3>Best Sellers</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-C-Women-09yAug2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-D-Women-09Aug2022.jpg" alt="" />
+            </div>
+        </div>
+        <div className='activewear'>
+            <h3>Shop By Department</h3>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-A-Women-04March2022A.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-B-Women-12April2022.jpg" alt="" />
+                <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-C-Women-04March2022A.jpg" alt="" />
             </div>
         </div>
     </div>
