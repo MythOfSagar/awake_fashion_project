@@ -1,0 +1,238 @@
+.mensProdSLiderButtons{
+  border:1px solid black;
+   border-radius:100px; 
+   width:5px; 
+   height:10px; 
+}
+
+.filterheading{
+  margin:30px 0px 3px 20px;
+}
+.alignHeading{
+  margin:0px 0px 7px 20px;
+}
+
+.routes span{
+   font-size:14px;
+   font-weight: 350;
+}
+
+.mensContainer{
+  display: flex;
+  /* border:1px solid black; */
+  /* height: 1000px; */
+  margin: 20px 0px 0px 0px;
+  width:100%;
+}
+
+.mensFilter{
+  width: 18%;
+  /* height: 700px; */
+/* border:1px solid orange; */
+}
+.mensProductsCont{
+  width:82%;
+  border-top:1px solid #e9e9ed;
+}
+.mensProducts{
+width:97%;
+/* height:700px; */
+/* border: 1px solid green; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: auto;
+column-gap: 40px;
+row-gap: 25px;
+margin: 20px 0px 0px 23px;
+}
+.productMainDiv{
+  height: 403px;
+}
+.mensProductImages{
+  width:220px;
+  height:300px;
+}
+.mensPriceCont{
+  display: flex;
+}
+
+.mensDetailsDiv{
+  margin: 10px 0px 0px 10px;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+}
+
+.mensTitle{
+  font-size:14px;
+  font-weight: 350;
+  color:
+  #606371;
+  /* color:red */
+}
+.mensBrand{
+  font-weight:650;
+  font-size:15px;
+  /* color:blue */
+}
+
+.mensPriceCont{
+  font-weight:700;
+  font-size:14px;
+  /* position:absolute; */
+  /* color:red */
+}
+.mensPriceCont>span:nth-child(2){
+  font-weight:300;
+  font-size:13px;
+  color:#606371
+}
+.mensPriceCont>span:nth-child(3){
+  font-weight:300;
+  font-size:13px;
+  color:#e85956;
+}
+
+.ratingDiv{
+  width:85px;
+  /* height:25px; */
+  background-color: white; 
+  margin:-20px 0px 0px 10px;
+  position: relative;
+  top:-15px;
+  font-size:11px;
+  font-weight:700;
+  padding: 3px;
+  padding-top:5px;
+}
+
+.checked{
+  color:#3d8080;
+  margin-left: 5px;
+  margin-right:3px
+}
+
+.wishlistBtn{
+   padding:5px 0px 5px 0px;
+  width: 80%;
+  margin-left: 8%;
+  /* margin-top: -600px; */
+  position: relative;
+  top:-40px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #535766;
+  color: white;
+  border: none; 
+  border-radius: 2px; 
+}
+.productsCategories{
+  border: 1px solid #e9e9ed;
+  border-bottom: none;
+}
+
+.productsCategories>h6{
+font-size:14px;
+font-weight: 700;
+color: #282c3f;
+margin: 7% 0% 0% 8%;
+}
+
+.productsCategories>div{
+  /* display: flex; */
+  margin: 15px 0px 0px 8%;
+}
+.moreFilterDivs{
+  display: none;
+}
+
+.moreBrands{
+font-size: 14px;
+font-weight: 400;
+color: #ff3f6c;
+border:none;
+background-color: white;
+/* padding-left:45px; */
+}
+.lessBrands{
+  font-size: 14px;
+font-weight: 400;
+color: #ff3f6c;
+border:none;
+background-color: white;
+display: none;
+/* padding-left:45px; */
+}
+
+.discountFilter>div{
+  display: flex;
+}
+.discountFilter p{
+  font-weight: 350;
+    color: 
+    #404142;
+    font-size: 14px;
+    position: relative;
+    top:-3px;
+}
+.discountFilter input{
+  width:15px;
+  height: 15px;
+  border:1px solid rgb(216, 216, 216);
+}
+
+.paginationDiv{
+  margin:2% 0% 0% 29%;
+}
+.paginateBtn{
+  border:1px solid hsl(0, 1%, 80%);
+  padding:9px 20px 9px 20px;
+  outline: none;
+  color: #282c3f;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.paginateBtn:hover{
+  border: 1px solid #282c3f;
+}
+
+.numBtn{
+  border:none;
+  background-color: white;
+  color: #282c3f;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px;
+}
+
+.moveBagBtn{
+  padding: 10px 69px 10px 69px;
+  border-top: 1px solid #dfdfdf;;
+  border-right:none;
+  border-bottom:1px solid #dfdfdf;
+  border-left:none;
+  background-color: white;
+  color: #ff3f6c;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.crossIconDiv{
+  margin-top: -25px;
+  position: relative;
+  bottom: -30px;
+  left:82%;
+  width: 25px;
+  height: 25px;
+  /* border: 1px solid black; */
+  border-radius: 50px;
+  background-color: rgb(235, 233, 233);
+  cursor: pointer;
+}
+.crossIconDiv>.fa-solid{
+  padding-left: 7px;
+  padding-top: 4px;
+}
