@@ -1,12 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Womens.css'
 
 const Womens = () => {
   return (
     <div className='womens' >
-        {/* <----------------Navbar start-----------------------> */}
-
-
 
         <div className='corner'>
           <h3>Deals Corner</h3>
@@ -62,40 +60,41 @@ const Womens = () => {
             <h3>Winterwear Essentials</h3>
             <div>
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.1q6AG0YkGNQGbw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹699</p>
+                    <p>from ₹699</p></Link>
                 </div>
+
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.jWCKtektwZ7fyQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹799</p>
+                    <p>from ₹799</p></Link>
                 </div>
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.759z%2fpBOCR2IfQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹999</p>
+                    <p>from ₹999</p></Link>
                 </div>
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.IMe0ungf4za01A474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹1299</p>
+                    <p>from ₹1299</p></Link>
                 </div>
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.JfatmIIsAy97lQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹729</p>
+                    <p>from ₹729</p></Link>
                 </div>
                 <div>
-                    <div>
+                <Link to='/womensproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.iCXTyV%2fqyeN1Xw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>from ₹859</p>
+                    <p>from ₹859</p></Link>
                 </div>
             </div>
         </div>
