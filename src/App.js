@@ -1,3 +1,4 @@
+import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Allroutes from "./Pages/Allroutes";
 import Productcard from "./Pages/Productcard";
@@ -7,9 +8,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Womens/> */}
-      {/* <Wproducts/> */}
-      <Allroutes/>
     </>
   );
 }

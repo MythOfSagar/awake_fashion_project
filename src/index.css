@@ -9,3 +9,8 @@ body {
   margin: 0px;
   box-sizing: border-box;
 }
+
+.proximanova {
+  font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
