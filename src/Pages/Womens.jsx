@@ -7,7 +7,6 @@ const Womens = () => {
         {/* <----------------Navbar start-----------------------> */}
 
 
-        {/* <----------------Navbar end-----------------------> */}
 
         <div className='corner'>
           <h3>Deals Corner</h3>
