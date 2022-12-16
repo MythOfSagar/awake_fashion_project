@@ -17,6 +17,7 @@ import SlideShow2 from "./SlideShow/SlideShow2";
 const HomePage = () => {
   return (
     <>
+      {/* homepage */}
       <Box w={{ base: "90%", md: "80%" }} margin={"auto"} marginTop={"4.4rem"}>
         {/* Section 1 SlideShow */}
 
