@@ -8,7 +8,6 @@ import Wproducts from "./Pages/Wproducts";
 function App() {
   return (
     <>
-      {/* hello */}
       <Navbar />
       <HomePage />
       <Footer />
