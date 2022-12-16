@@ -170,3 +170,74 @@
     margin: auto;
     margin-top: 40px;
 }
+.mensbottom{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.mensbottom>img{
+    width: 40px;
+    height: 40px;
+}
+/* --------------------------medium screen-------------------- */
+@media (max-width: 1100px) {
+    .cornerchild{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .winterwear>div,.ethnicwear>div,.trendybottom>div,
+    .shopbycategory>div{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .toppics>div,.activewear>div{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .bestseller>h3,.activewear>h3,.trendybottom>h3,.shopbycategory>h3,.flashsale>h3,.winterwear>h3,.ethnicwear>h3,.toppics>h3{
+        text-align: left;
+        font-size: 25px;
+        padding-top: 20px;
+        font-weight: 600;
+        margin-left: 5%;
+    }
+    .onlyimg>img,.flashsale img,.shopnow img,.firsttime img,.dealsimg img{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* -------------------------small screen ---------------- */
+@media (max-width: 550px) {
+    .cornerchild{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .winterwear>div,.ethnicwear>div,.trendybottom>div,
+    .shopbycategory>div{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .toppics>div,.activewear>div{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .bestseller>h3,.activewear>h3,.trendybottom>h3,.shopbycategory>h3,.flashsale>h3,.winterwear>h3,.ethnicwear>h3,.toppics>h3{
+        text-align: left;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+    .onlyimg>img,.flashsale img,.shopnow img,.firsttime img,.dealsimg img{
+        width: 90%;
+        margin: auto;
+    }
+    .bestseller>div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+}
+}
