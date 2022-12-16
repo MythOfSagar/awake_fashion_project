@@ -108,7 +108,7 @@ const Navbar = () => {
           <Link to={"/"}>
             <FiHeart size={24} color={"black"} />
           </Link>
-          <Link to={"/"}>
+          <Link to={"/basket"}>
             <AiOutlineShoppingCart size={24} color={"black"} />
           </Link>
         </Stack>
