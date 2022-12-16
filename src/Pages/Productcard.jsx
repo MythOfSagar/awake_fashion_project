@@ -7,12 +7,12 @@ const Productcard = ({item}) => {
 
   return (
     <div>
-    <Link to={`/product/${id}`}><div className="container">
+    <div className="container">
  
     <div className="card">
 
         <div className="imgbox">
-            <img src={images[0]}/>
+        <Link to={`/product/${id}`}><img src={images[0]}/></Link>
             <p><span>₹ {price}</span><span style={{color:'grey',opacity:'0.5'}}>  ₹ {off_price}</span></p>
             <p>{title}</p>
         </div>
@@ -21,7 +21,7 @@ const Productcard = ({item}) => {
             <button onClick={addtocart(item)}>ADD TO BASKET</button>
         </div>
     </div>
-    </div></Link>
+    </div>
 </div>
   )
 }

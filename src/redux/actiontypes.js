@@ -8,3 +8,8 @@ export const GET_MENS_PRODUCT_ERROR='getmensproductserror'
 export const GET_MENS_PRODUCT_LOADING='getmensproductsloading'
 
 
+export const GET_KIDS_PRODUCT_SUCCESS='getkidsproductssuccess'
+export const GET_KIDS_PRODUCT_ERROR='getkidsproductserror'
+export const GET_KIDS_PRODUCT_LOADING='getkidsproductsloading'
+
+
