@@ -68,7 +68,7 @@
     text-align: center;
     padding-top: 40px;
 }
-.winterwear>div>div>div{
+.winterwear>div>div div{
     height: 150px;
     width: 150px;
     /* border: 1px solid rebeccapurple; */
