@@ -10,7 +10,8 @@ body {
   box-sizing: border-box;
 }
 
-.proximanova {
-  font-family: ProximaNova-Bold, "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji";
+.SpanUnderline {
+  width: 48px;
+  padding-top: 4px;
+  border-bottom: 4px solid #faa619;
 }
