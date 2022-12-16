@@ -30,7 +30,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position={"fixed"} top={0} left={0} w={"100%"} zIndex={100}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -344,6 +344,10 @@ const NAV_ITEMS = [
   {
     label: "Shoes And Bags",
     href: "/",
+  },
+  {
+    label: "Beauty",
+    href: "/beauty",
   },
 ];
 
