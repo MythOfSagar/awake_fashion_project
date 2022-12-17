@@ -1,0 +1,264 @@
+
+.images{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+   gap: 5px 5px;
+    /* border: 5px solid green; */
+    overflow: hidden;
+}
+.images div{
+  overflow: hidden;
+  border: 0px solid white;
+}
+.images img{
+     overflow: hidden;
+     transition: 0.5s all ease-in-out;
+}
+.images img:hover{ 
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+ 
+.top-main{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1.98fr 1fr;
+    gap:15px;
+    /* border: 5px solid blue; */
+}
+hr{
+    background-color: rgb(224, 217, 217);
+}
+.size-main{
+  margin-top: 10px;
+  /* border: 1px solid greenyellow; */
+}
+.size-main div{
+  display: flex;
+  justify-content: flex-start;
+}
+.size-select{
+  display: flex;
+  margin: 5px 0px 5px 0px;
+  justify-content:space-between;
+  
+}
+.size-select button{
+  background-color: white;
+  border: 1px solid rgb(225, 219, 219);
+  color:grey;
+  font-size: 16px;
+  padding: 15px;
+  margin: 5px;
+}
+
+
+.delivery-section{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.delivery-section h4,p{
+    text-align: left;
+    padding-left:15px ;
+    padding-right: 5px;
+    font-size: 14px;
+}
+.delivery-section h1{
+    text-align: left;
+    padding-left:15px ;
+    font-size: 20px;  
+}
+.delivery-section p{
+  margin-top:-15px;
+}
+
+
+.delivery-section span{
+    padding-top: 15px;
+    text-align: left;
+    padding-left:15px ;
+    font-size: 14px;
+  }
+  .fav-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+  .fav-section div{
+    display: flex;
+  }
+  .fav-section p{
+    margin-top: 5px;
+  }
+  
+
+.product-overview ul li{
+    text-align: left;
+    padding-left:10px ;
+    font-size: 16px;
+}
+.product-overview p,h4{
+    text-align: left;
+    padding-left:20px ;
+    font-size: 16px;
+    line-height: 15px;
+}
+.may-like{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    /* border: 5px solid blue; */
+}
+.may-like-parent h1{
+    text-align: left;
+    margin-left: 110px;
+    font-size: 40px;
+    font-weight: 400;
+}
+.may-like div p{
+ padding: 0px 20px;
+}
+.may-like p{
+    text-align: left;
+    line-height: 20px;
+}
+.may-like img{
+    width:100%
+}
+.review-box{
+    background-color: #ECEDEB;
+    margin-bottom: 70px;
+    padding: 50px;
+    margin-top: 50px;
+}
+.review-box h1{
+    text-align: left;
+    margin-left: 55px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+}
+.box img {
+  width: 100%;
+  height: auto;
+}
+.box .btn {
+  position: absolute;
+  top: 7%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+.btn:hover{
+width: 40px;
+}
+
+#size{
+  margin: 10px 0px 10px 5px;
+}
+.radioinput {
+  display: none;
+}
+
+.radiolabel {
+  background-color: rgb(252, 248, 248);
+  border: 1px solid rgb(209, 207, 207);
+  padding: 15px 15px;
+  margin: 2px;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.radioinput:checked+.radiolabel {
+  background-color: grey;
+  color: white;
+}
+.review-tab{
+  display: flex;
+  margin: auto;
+  width: 50%
+}
+
+
+
+@media screen and (min-width:650px) and (max-width:1024px) {
+  .images{
+    display: block;
+  }
+  .img2{
+    display: none;
+  }
+  .img3{
+    display: none;
+  }
+  .img4{
+    display: none;
+  }
+  .img1{
+    width: 100%;
+  }
+  .may-like{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.review-tab{
+  display: flex;
+  margin: auto;
+  width: 83%
+}
+
+}
+
+@media screen and (min-width:320px) and (max-width:650px) {
+  .images{
+    display: block;
+  }
+  .img2{
+    display: none;
+  }
+  .img3{
+    display: none;
+  }
+  .img4{
+    display: none;
+  }
+  .img1{
+    display: none;
+  }
+  .color-img{
+    width: 50%;
+    height: 100%;
+  
+  }
+  .may-like{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1,1fr);
+    gap: 15px;
+}
+.review-box{
+  width: 90%;
+}
+.review-tab{
+  margin: auto;
+  width: 100%
+}
+}
