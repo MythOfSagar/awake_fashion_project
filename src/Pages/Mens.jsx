@@ -181,48 +181,7 @@ const Mens = () => {
                 </div>
             </div>
         </div>
-        {/* <div className='shopbycategory'>
-            <h3>Shop By Category</h3>
-            <div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://tse3.mm.bing.net/th?id=OIP.9T2H0lY26i2YKSCNrpYoyAHaJ4&pid=Api&P=0)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.Pw%2bHMI4keDFEbQ474C474&o=5&pid=21.1&w=&h=)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.ijxrATNBQ8mFew474C474&o=5&pid=21.1&w=&h=)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://sp.yimg.com/ib/th?id=OPA.cu0Z7aUty1U3xQ474C474&o=5&pid=21.1&w=&h=)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://tse1.mm.bing.net/th?id=OIP.zICg9APLrr8OdaMruWdO7AHaJT&pid=Api&P=0)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                <div>
-                    <div className='bottom' style={{backgroundImage:'url(https://tse2.mm.bing.net/th?id=OIP.FMfBFW0eLdksxTpHiT9-mQHaLH&pid=Api&P=0)'}}>
-                    </div>                    
-                    <p>Tops & TEES</p>
-                    <p>From ₹299</p>
-                </div>
-                
-            </div>
-        </div> */}
+        
         <div className='activewear'>
             <h3>Winter Trends</h3>
             <div>
