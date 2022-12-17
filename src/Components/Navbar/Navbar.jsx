@@ -303,6 +303,7 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
+    href:"/womens"
   },
   {
     label: "Men",
@@ -336,10 +337,11 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
+    href:"/mens"
   },
   {
     label: "Kids",
-    href: "/",
+    href: "/kids",
   },
   {
     label: "Shoes And Bags",
