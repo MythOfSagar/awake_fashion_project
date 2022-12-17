@@ -1,0 +1,43 @@
+
+.container .card {
+    position: relative;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+.container .card .imgbox img {
+    width: 100%;
+    border-radius: 4px;
+}
+.container .card .content {
+    position: relative;
+    margin-top: -100px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -10px;
+    transition-delay: 0.3s;
+    /* z-index: 999999; */
+   
+}
+.content>button{
+    width: 100%;
+    background-color: orange;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    /* border: 1px solid red; */
+
+}
