@@ -105,7 +105,7 @@ const Navbar = () => {
               Login
             </Button>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/wishlistPage"}>
             <FiHeart size={24} color={"black"} />
           </Link>
           <Link to={"/"}>

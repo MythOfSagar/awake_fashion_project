@@ -8,6 +8,7 @@ import Womens from './Womens'
 import Wproducts from './Wproducts'
 import HomePage from '../Components/HomePage/HomePage'
 import SingleProduct from './SingleProduct'
+import WishlistPage from './WishlistPage'
 
 const Allroutes = () => {
   return (
@@ -21,6 +22,7 @@ const Allroutes = () => {
         <Route path='/mens' element={<Mens/>}></Route>
         <Route path='/kids' element={<Kids/>}></Route>
         <Route path='/product/:id' element={<SingleProduct/>}></Route>
+        <Route path='/wishlistPage' element={<WishlistPage/>}></Route>
     </Routes>
     </div>
   )

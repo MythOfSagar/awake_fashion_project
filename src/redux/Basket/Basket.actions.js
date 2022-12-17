@@ -9,7 +9,7 @@ import {GET_BASKET_ITEMS_LOADING,GET_BASKET_ITEMS_SUCCESS
     export const getBasket=()=>async(dispatch)=>{
         dispatch({type:GET_BASKET_ITEMS_LOADING});
         try{
-            let response=await axios.get("http://localhost:8080/cartItems");
+            let response=await axios.get("https://fashion-database-api.vercel.app/CartPage");
             console.log(response);
             dispatch({type:GET_BASKET_ITEMS_SUCCESS,payload:response.data});
         }
@@ -22,7 +22,7 @@ import {GET_BASKET_ITEMS_LOADING,GET_BASKET_ITEMS_SUCCESS
     export const addBasket=(payload)=>async(dispatch)=>{
         dispatch({type:ADD_ITEM_TO_BASKET_LOADING});
         try{
-            let response=await axios.post("http://localhost:8080/cartItems",payload);
+            let response=await axios.post("https://fashion-database-api.vercel.app/CartPage",payload);
             console.log(response);
             dispatch({type:ADD_ITEM_TO_BASKET_SUCCESS,payload:response.data});
         }
@@ -35,7 +35,7 @@ import {GET_BASKET_ITEMS_LOADING,GET_BASKET_ITEMS_SUCCESS
     export const updateBasket=(id,payload)=>async(dispatch)=>{
         dispatch({type:UPDATE_BASKET_ITEMS_LOADING});
         try{
-            let response=await axios.patch(`http://localhost:8080/cartItems/${id}`,{
+            let response=await axios.patch(`https://fashion-database-api.vercel.app/CartPage/${id}`,{
              ...payload   
             });
             console.log(response);
@@ -50,7 +50,7 @@ import {GET_BASKET_ITEMS_LOADING,GET_BASKET_ITEMS_SUCCESS
     export const deleteBasket=(id)=>async(dispatch)=>{
         dispatch({type:REMOVE_BASKET_ITEMS_LOADING});
         try{
-            let response=await axios.delete(`http://localhost:8080/cartItems/${id}`);
+            let response=await axios.delete(`https://fashion-database-api.vercel.app/CartPage/${id}`);
             console.log(response);
             dispatch({type:REMOVE_BASKET_ITEMS_SUCCESS,payload:response.data});
         }

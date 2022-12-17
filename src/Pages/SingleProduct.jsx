@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import {
     Modal,
     ModalOverlay,
@@ -19,15 +20,25 @@ import './SingleProduct.css'
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar/Navbar';
 import axios from 'axios';
+import { addBasket } from '../redux/Basket/Basket.actions';
+import { addWishlist } from '../redux/Wishlist/Wishlist.actions';
 
 const getData = (id) => {
-    return axios.get(`https://fashion-database-api.vercel.app/Women/${id}`);
-  };
+    if (id < 3) {
+        return axios.get(`https://fashion-database-api.vercel.app/Mens/${id}`);
+    } else if (3 < id < 7) {
+        return axios.get(`https://fashion-database-api.vercel.app/Women/${id}`);
+    }
+    else {
+        return axios.get(`https://fashion-database-api.vercel.app/KidsClothing/${id}`);
+    }
+
+};
 
 const SingleProduct = () => {
     const [size, setSize] = useState("");
     // const {loading,data}=useSelector((store)=>store.);
-    // const dispatch=useDispatch();
+    const dispatch = useDispatch();
     const { id } = useParams();
     const [data, setData] = useState({});
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -37,27 +48,14 @@ const SingleProduct = () => {
         getData(id).then((res) => setData(res.data));
     }, []);
 
-    // let data = {
-    //     "id": 11,
-    //     "categories": "shirt",
-    //     "size": "39,40,42,44",
-    //     "title": "Men Blue Regular Fit Printed Casual Shirt",
-    //     "price": "699",
-    //     "gender": "men",
-    //     "description": "Green and White printed casual shirt, has a spread collar, short sleeves",
-    //     "brand": "Roadster",
-    //     "color": "navyBlue",
-    //     "discount": 40,
-    //     "off_price": 1049,
-    //     "images": [
-    //         "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1364628/2016/8/31/11472636737718-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-1.jpg",
-    //         "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1364628/2016/8/31/11472636737673-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-3.jpg",
-    //         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1364628/2016/8/31/11472636737673-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-3.jpg",
-    //         "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1364628/2016/8/31/11472636737656-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-4.jpg"
-    //     ],
-    //     "rating": 3.9,
-    //     "count": 29
-    // }
+    const handleAddBasket = (data) => {
+        dispatch(addBasket(data))
+    }
+
+    const handleAddFav = (data) => {
+        console.log("add to fav")
+        dispatch(addWishlist(data))
+    }
 
     // let data=  {
     //     "id": 1,
@@ -80,15 +78,15 @@ const SingleProduct = () => {
     //   }
 
 
-    console.log("data",typeof data)
-    console.log("img",data)
-    const {title,price,gender,description,category,color,off_price,discount,images,ratings,brand}=data
+    console.log("data", typeof data)
+    console.log("img", data)
+    const { title, price, gender, description, category, color, off_price, discount, images, ratings, brand } = data
 
     return (
-       
-        <div>
+
+        <div style={{ marginTop: '80px' }}>
             <Navbar />
-            <div style={{ marginTop: '80px' }}>
+            <div >
                 <p style={{
                     alignText: 'left', fontSize: '20px',
                     marginLeft: '7%', fontWeight: '500'
@@ -98,21 +96,21 @@ const SingleProduct = () => {
 
                     <div>
                         <div className='images'>
-                        {/* {data.images.map((item)=>(
+                            {/* {images && images.map((item)=>(
                             <div><img className='img2' src={item} alt="image2" width="420px" /></div>  
                         ))} */}
-                            {/* <div><img className='img1' src={data.images[0]} alt="image1" width="420px" /></div>
-                            <div><img className='img2' src={data.images[1]} alt="image2" width="420px" /></div>
-                            <div> <img className='img3' src={data.images[2]} alt="image3" width="420px" /></div>
-                            <div><img className='img4' src={data.images[3]} alt="image4" width="420px" /></div> */}
+                            <div><img className='img1' src={images && images[0] || "https://media.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif"} alt="image1" width="420px" /></div>
+                            <div><img className='img2' src={images && images[1] || "https://media.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif"} alt="image2" width="420px" /></div>
+                            <div> <img className='img3' src={images && images[2] || "https://media.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif"} alt="image3" width="420px" /></div>
+                            <div><img className='img4' src={images && images[3] || "https://media.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif"} alt="image4" width="420px" /></div>
                         </div>
                     </div>
                     <div>
-                        <div style={{ lineHeight: '5px', marginLeft: '0px' }}>
+                        <div style={{ lineHeight: '1.2em', marginLeft: '0px' }}>
                             <h1 style={{ color: '#F25139', textAlign: 'left', paddingLeft: '15px' }}><sup style={{ color: '#F25139', fontSize: '15px', fontWeight: '600' }}>&#8377;</sup>{price}<span style={{ color: 'grey', fontSize: '15px', fontWeight: '400' }}> Inclusive of all taxes</span></h1>
                             <p><strike style={{ color: 'grey' }}>&#8377; {off_price}</strike> save &#8377;{off_price - price} ({discount}%)</p>
                             <p style={{ color: 'orange' }}><u>Free shipping on all orders</u></p>
-                            {/* <img className='color-img' src={images[1]} alt="image1" style={{ border: '2px solid orange', margin: '10px 150px 10px 20px' }} width="40px" height="50px" align='left' /> */}
+                            <img className='color-img' src={images && images[1]} alt="image1" style={{ border: '2px solid orange', margin: '10px 150px 10px 20px' }} width="40px" height="50px" align='left' />
                             <p style={{ color: 'grey', fontSize: '15px', fontWeight: '400', marginTop: '100px' }}>Color : <span style={{ color: 'black', fontSize: '15px', fontWeight: '700' }}>{color}</span></p>
 
                             <div className='size-main'>
@@ -124,8 +122,8 @@ const SingleProduct = () => {
                                         <Modal isOpen={isOpen} onClose={onClose}>
                                             <ModalOverlay />
                                             <ModalContent>
-                                                <div style={{ position: 'absolute', top: '100px', left: '400px' }}>
-                                                    <img onClick={onClose} src="https://thesocietypages.org/socimages/files/2012/03/15.png" width="700px" />
+                                                <div style={{ position: 'absolute', top: '00px', left: '-130px', width: '1500px' }}>
+                                                    <img onClick={onClose} src="https://thesocietypages.org/socimages/files/2012/03/15.png" />
                                                 </div>
                                             </ModalContent>
                                         </Modal>
@@ -144,14 +142,11 @@ const SingleProduct = () => {
                                     <label className="radiolabel" onclick="xl()" for="xl">XL</label>
                                 </div>
                             </div>
-                            <button style={{
-                                backgroundColor: 'orange', color: 'white',
-                                border: 'none', padding: '20px 155px'
-                            }}>ADD TO BASKET
+                            <button className='addtobasket' onClick={() => handleAddBasket(data)}>ADD TO BASKET
                             </button>
                         </div>
                         <div className='fav-section'>
-                            <div><LoyaltyIcon></LoyaltyIcon><p>Add to Favourites</p></div>
+                            <div onClick={() => handleAddFav(data)}><LoyaltyIcon></LoyaltyIcon><p>Add to Favourites</p></div>
                             <div><ShareIcon></ShareIcon><p>Share</p></div>
                         </div>
                         <hr></hr>
@@ -160,7 +155,7 @@ const SingleProduct = () => {
                             <button style={{ color: "#EF5350", backgroundColor: "#FFF4F4", fontSize: "12px", padding: "10px 30px", border: 'none' }}>PROMOTION OFFER</button>
                             <p style={{ marginTop: '10px', paddingLeft: '15px', paddingRight: '15px' }}>Shop for Rs. 2,999 & Get 12% Off. Code - SAVE12 | Shop for Rs. 2,499 & Get 10% Off. Code - BF10 | Shop for Rs. 1,999 & Get 8% Off. Code - SAVE8 Browse promotion</p>
                             <hr></hr>
-                            <div>
+                            <div style={{ paddingTop: '1em' }}>
                                 <h4><StorefrontIcon></StorefrontIcon>&nbsp;Click & Collect</h4>
                                 <p>Order this product now and collect it from a store of your choice. <span style={{ color: 'orange' }}><u>Learn more</u> </span> </p>
                             </div>
@@ -186,8 +181,8 @@ const SingleProduct = () => {
                             <hr></hr>
                         </div>
                         <div className='product-overview'>
-                            <h4>Overview</h4>
-                            <p>{description}</p>
+                            <h4><b>Overview</b></h4>
+                            <p style={{ lineHeight: '1.2em' }}>{description}</p>
                             <ul>
                                 <li>Brand : {brand}</li>
                                 <li>Categories : {category}</li>
@@ -210,28 +205,28 @@ const SingleProduct = () => {
                     <div className='may-like'>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000011483687-Red-TeaRose-1000011483687_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 699 <span>&#8377; <strike>999</strike></span></p>
                             <p>FAME FOREVER Men Printed Crew Neck Regular Fit Sweatshirt
                             </p>
                         </div>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000011581522-Yellow-Yellow-1000011581522_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 1049 <span>&#8377; <strike>1499</strike></span></p>
                             <p>SmileyWorld Men Graphic Printed Regular Fit Hooded Sweatshirt
                             </p>
                         </div>
                         <div class="box">
                             <img src="https://lmsin.net/cdn-cgi/image/h=1200,w=1200,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010673895-Green-Mint-1000010673895_01-2100.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 734 <span>&#8377; <strike>1049</strike></span></p>
                             <p>SmileyWorld Women Printed Crew Neck Cropped Sweatshirt
                             </p>
                         </div>
                         <div class="box">
                             <img src="https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000012114200-Red-Red-1000012114200_01-2100.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 4899 <span>&#8377; <strike>7999</strike></span></p>
                             <p>SKECHERS Men Textured Goodyear Sole Lace-Up Shoes</p>
                         </div>
@@ -242,7 +237,7 @@ const SingleProduct = () => {
                     <div className='may-like'>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009854981-Var10-Red-Wine-1000009854981-Var10_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 2099 <span>&#8377; <strike>2999</strike></span></p>
                             <p>FORCA Men Solid Denim Jacket
 
@@ -250,14 +245,14 @@ const SingleProduct = () => {
                         </div>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000011721938-Black-Black-1000011721938_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 999 <span>&#8377; <strike>1299</strike></span></p>
                             <p>CODE Women Solid Knee-Length Shrug
                             </p>
                         </div>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000011721951-Green-Olive-1000011721951_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 1483 <span>&#8377; <strike>1599</strike></span></p>
                             <p>CODE Women Textured Longline Shrug
 
@@ -265,7 +260,7 @@ const SingleProduct = () => {
                         </div>
                         <div class="box">
                             <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000011474011-Beige-Khaki-1000011474011_01-1200.jpg" />
-                            <LoyaltyIcon class="btn"></LoyaltyIcon>
+                            <LoyaltyIcon class="btn" onClick={() => handleAddFav(data)}></LoyaltyIcon>
                             <p>&#8377; 2309 <span>&#8377; <strike>3399</strike></span></p>
                             <p>DENIMIZE Men Solid Full Sleeves Casual Jacket
 
@@ -276,7 +271,7 @@ const SingleProduct = () => {
                 <div className='review-box'>
                     <h1>Reviews</h1>
                     <div className='review-tab'>
-                        <div><RateReviewOutlinedIcon style={{
+                        <div className='review-tab1'><RateReviewOutlinedIcon style={{
                             fontSize: '50px',
                             fontWeight: '100'
                         }}></RateReviewOutlinedIcon></div>

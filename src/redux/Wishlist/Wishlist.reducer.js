@@ -4,6 +4,7 @@ import {
     GET_WISHLIST_ITEMS_ERROR, GET_WISHLIST_ITEMS_LOADING,
     GET_WISHLIST_ITEMS_SUCCESS, REMOVE_WISHLIST_ITEMS_ERROR,
     REMOVE_WISHLIST_ITEMS_LOADING, REMOVE_WISHLIST_ITEMS_SUCCESS,
+     RESET_WISHLIST_ITEMS,
      UPDATE_WISHLIST_ITEMS_ERROR, UPDATE_WISHLIST_ITEMS_LOADING, 
      UPDATE_WISHLIST_ITEMS_SUCCESS
   } from "./Wishlist.types";
@@ -149,7 +150,11 @@ import {
           }
         }
       }
-  
+      case RESET_WISHLIST_ITEMS :{
+        return {
+          data:[]
+        }
+      }
   
       default: {
         return state;
