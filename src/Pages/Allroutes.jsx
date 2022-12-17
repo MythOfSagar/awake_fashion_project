@@ -7,6 +7,12 @@ import Shipping from '../Components/Basket/shipping'
 import { InitialFocus } from '../Components/Basket/signIn'
 import Womens from './Womens'
 import Wproducts from './Wproducts'
+import Kids from './Kids'
+import Kproducts from './Kproducts'
+import Mens from './Mens'
+import Mproducts from './Mproduct''
+import HomePage from '../Components/HomePage/HomePage'
+import SingleProduct from './SingleProduct'
 
 const Allroutes = () => {
   return (
@@ -19,6 +25,11 @@ const Allroutes = () => {
         <Route path='/basket' element={<Basket></Basket>}></Route>
         <Route path='/paymentsuccess' element={<PaymentSuccess></PaymentSuccess>}></Route>
         <Route path='/paymentresponse/:title/:src' element={<PaymentResponse></PaymentResponse>}></Route>
+        <Route path='/mensproduct' element={<Mproducts/>}></Route>
+        <Route path='/kidsproduct' element={<Kproducts/>}></Route>
+        <Route path='/mens' element={<Mens/>}></Route>
+        <Route path='/kids' element={<Kids/>}></Route>
+        <Route path='/product/:id' element={<SingleProduct/>}></Route>
     </Routes>
     </div>
   )
