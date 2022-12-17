@@ -26,9 +26,9 @@ const Allroutes = () => {
         <Route path='/paymentresponse/:title/:src' element={<PaymentResponse></PaymentResponse>}></Route>
         <Route path='/mensproduct' element={<Mproducts/>}></Route>
         <Route path='/kidsproduct' element={<Kproducts/>}></Route>
-        <Route path='/mens' element={<Mens/>}></Route>
-        <Route path='/kids' element={<Kids/>}></Route>
-        <Route path='/product/:id' element={<SingleProduct/>}></Route>
+        <Route path='/mens' element={<Mens/>}/>
+        <Route path='/kids' element={<Kids/>}/>
+        <Route path='/product/:id' element={<SingleProduct/>}/>
     </Routes>
     </div>
   )
