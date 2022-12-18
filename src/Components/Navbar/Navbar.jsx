@@ -303,7 +303,7 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
-    href:"/womens"
+    href: "/womens",
   },
   {
     label: "Men",
@@ -337,7 +337,7 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
-    href:"/mens"
+    href: "/mens",
   },
   {
     label: "Kids",
