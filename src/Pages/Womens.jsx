@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../Components/Footer/Footer'
 import './Womens.css'
+import Womensslider from './Womensslider'
 
 const Womens = () => {
   return (
     <div className='womens' >
-
+        <div><Womensslider/></div>
         <div className='corner'>
           <h3>Deals Corner</h3>
             <div className='cornerchild'>
@@ -289,6 +291,10 @@ const Womens = () => {
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-C-Women-04March2022A.jpg" alt="" />
             </div>
         </div>
+        <div>
+            <Footer/>
+        </div>
+
     </div>
   )
 }

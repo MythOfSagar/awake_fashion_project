@@ -5,7 +5,7 @@ export const getbasketData=()=>async (dispatch)=>{
    dispatch({type:GET_BASKET_LOADING})
 
    try{
-        const resp=await axios.get("https://fashion-database-api.vercel.app/Mens")
+        const resp=await axios.get("https://fashion-database-api.vercel.app/CartPage")
         const data=await resp.data
 
         dispatch({type:GET_BASKET_SUCCESS,payload:data})
@@ -21,7 +21,9 @@ export const signIn=(user)=>(dispatch)=>{
 
 } 
 
-export const remove_BasketItem=(data)=>(dispatch)=>{
+export const remove_BasketItem=(data,id)=>async (dispatch)=>{
+
+    await axios.delete(`https://fashion-database-api.vercel.app/CartPage/${id}`)
 
     dispatch({type:remove_BASKET_ITEM,payload:data})
 }

@@ -25,9 +25,13 @@ import {
 } from "@chakra-ui/icons";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
+
+  const isAuth=useSelector(store=>store.basketreducer.isAuth)
+  const user=useSelector(store=>store.basketreducer.user)
 
   return (
     <Box position={"fixed"} top={0} left={0} w={"100%"} zIndex={100}>
@@ -95,17 +99,17 @@ const Navbar = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Link to={"/"}>
+          <Link to={"/signIn"}>
             <Button
               fontSize={"18px"}
               fontWeight={600}
               variant={"link"}
               color={"black"}
             >
-              Login
+               {isAuth ? `Welcome ${user}` : "Login"}
             </Button>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/wishlistPage"}>
             <FiHeart size={24} color={"black"} />
           </Link>
           <Link to={"/basket"}>
@@ -126,7 +130,7 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
-  return (
+  return ( 
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
@@ -159,7 +163,7 @@ const DesktopNav = () => {
               >
                 <Stack>
                   {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                    <DesktopSubNav key={child.label} href={navItem.href} {...child} />
                   ))}
                 </Stack>
               </PopoverContent>
@@ -215,7 +219,7 @@ const MobileNav = () => {
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem key={navItem.label} href={navItem.href} {...navItem} />
       ))}
     </Stack>
   );
@@ -303,6 +307,7 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
+    href:"/womens"
   },
   {
     label: "Men",
@@ -336,14 +341,15 @@ const NAV_ITEMS = [
         href: "/",
       },
     ],
+    href:"/mens"
   },
   {
     label: "Kids",
-    href: "/",
+    href: "/kids",
   },
   {
-    label: "Shoes And Bags",
-    href: "/",
+    label: "Beauty",
+    href: "/beauty",
   },
 ];
 

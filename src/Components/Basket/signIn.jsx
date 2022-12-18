@@ -2,7 +2,7 @@ import { Box, Button, FormControl, FormLabel, Heading, Input, Modal, ModalBody, 
 import React, { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { signIn } from "../../redux/basket/basket.action"
+import { signIn } from "../../redux/basket_Items/basket.action"
 
 export function InitialFocus() {
  
@@ -30,7 +30,9 @@ export function InitialFocus() {
             dispatch(signIn(userName))
             onClose()
             setToggle(true)
-            navigate("/")
+            if(userName==="Admin555"){navigate("/basket")}
+            else{navigate("/")}
+            
         }
         if(e.target.value.length===OTP.length &&e.target.value!==OTP){
             alert("Enter correct OTP")

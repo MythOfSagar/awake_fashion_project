@@ -1,130 +1,131 @@
 import {
-    ADD_ITEM_TO_BASKET_ERROR,
-    ADD_ITEM_TO_BASKET_LOADING, ADD_ITEM_TO_BASKET_SUCCESS,
-    GET_BASKET_ITEMS_ERROR, GET_BASKET_ITEMS_LOADING,
-    GET_BASKET_ITEMS_SUCCESS, REMOVE_BASKET_ITEMS_ERROR,
-    REMOVE_BASKET_ITEMS_LOADING, REMOVE_BASKET_ITEMS_SUCCESS,
-     UPDATE_BASKET_ITEMS_ERROR, UPDATE_BASKET_ITEMS_LOADING, 
-     UPDATE_BASKET_ITEMS_SUCCESS
-  } from "./Basket.types";
+    ADD_ITEM_TO_WISHLIST_ERROR,
+    ADD_ITEM_TO_WISHLIST_LOADING, ADD_ITEM_TO_WISHLIST_SUCCESS,
+    GET_WISHLIST_ITEMS_ERROR, GET_WISHLIST_ITEMS_LOADING,
+    GET_WISHLIST_ITEMS_SUCCESS, REMOVE_WISHLIST_ITEMS_ERROR,
+    REMOVE_WISHLIST_ITEMS_LOADING, REMOVE_WISHLIST_ITEMS_SUCCESS,
+     RESET_WISHLIST_ITEMS,
+     UPDATE_WISHLIST_ITEMS_ERROR, UPDATE_WISHLIST_ITEMS_LOADING, 
+     UPDATE_WISHLIST_ITEMS_SUCCESS
+  } from "./Wishlist.types";
   
   // Note: Do not update/change the initial state
-  const basketInitalState = {
-    getBasketItems: {
+  const wishlistInitalState = {
+    getWishlistItems: {
       loading: false,
       error: false,
     },
-    addBasketItem: {
+    addWishlistItem: {
       loading: false,
       error: false,
     },
-    updateBasketItem: {
+    updateWishlistItem: {
       loading: false,
       error: false,
     },
-    removeBasketItem: {
+    removeWishlistItem: {
       loading: false,
       error: false,
     },
     data: [],
   };
-  export const basketReducer = (state = basketInitalState, action) => {
+  export const wishlistReducer = (state = wishlistInitalState, action) => {
     switch (action.type) {
-      case ADD_ITEM_TO_BASKET_LOADING: {
+      case ADD_ITEM_TO_WISHLIST_LOADING: {
         return {
           ...state,
-          addBasketItem: {
+          addWishlistItem: {
             laoding: true,
             error: false,
           }
         }
       }
-      case ADD_ITEM_TO_BASKET_SUCCESS: {
+      case ADD_ITEM_TO_WISHLIST_SUCCESS: {
         return {
           ...state,
-          addBasketItem: {
+          addWishlistItem: {
             laoding: false,
             error: false,
           },
           data: [...state.data, action.payload]
         }
       }
-      case ADD_ITEM_TO_BASKET_ERROR: {
+      case ADD_ITEM_TO_WISHLIST_ERROR: {
         return {
           ...state,
-          addBasketItem: {
+          addWishlistItem: {
             laoding: false,
             error: true,
           }
         }
       }
-      case GET_BASKET_ITEMS_LOADING: {
+      case GET_WISHLIST_ITEMS_LOADING: {
         return {
           ...state,
-          getBasketItem: {
+          getWishlistItem: {
             laoding: true,
             error: false,
           }
         }
       }
-      case GET_BASKET_ITEMS_SUCCESS: {
+      case GET_WISHLIST_ITEMS_SUCCESS: {
         return {
           ...state,
-          getBasketItem: {
+          getWishlistItem: {
             laoding: false,
             error: false,
           },
           data: [...action.payload]
         }
       }
-      case GET_BASKET_ITEMS_ERROR: {
+      case GET_WISHLIST_ITEMS_ERROR: {
         return {
           ...state,
-          getBasketItem: {
+          getWishlistItem: {
             laoding: false,
             error: true,
           }
         }
       }
-      case REMOVE_BASKET_ITEMS_LOADING: {
+      case REMOVE_WISHLIST_ITEMS_LOADING: {
         return {
           ...state,
-          removeBasketItem: {
+          removeWishlistItem: {
             laoding: true,
             error: false,
           }
         }
       }
-      case REMOVE_BASKET_ITEMS_SUCCESS: {
+      case REMOVE_WISHLIST_ITEMS_SUCCESS: {
         const removed = state.data.filter((d) => d.id !== action.payload)
         return {
           ...state,
-          removeBasketItem: {
+          removeWishlistItem: {
             laoding: false,
             error: false,
           },
           data: [...removed]
         }
       }
-      case REMOVE_BASKET_ITEMS_ERROR: {
+      case REMOVE_WISHLIST_ITEMS_ERROR: {
         return {
           ...state,
-          removeBasketItem: {
+          removeWishlistItem: {
             laoding: false,
             error: true,
           }
         }
       }
-      case UPDATE_BASKET_ITEMS_LOADING: {
+      case UPDATE_WISHLIST_ITEMS_LOADING: {
         return {
           ...state,
-          updateBasketItem: {
+          updateWishlistItem: {
             laoding: true,
             error: false,
           }
         }
       }
-      case UPDATE_BASKET_ITEMS_SUCCESS: {
+      case UPDATE_WISHLIST_ITEMS_SUCCESS: {
         const updated = state.data.map((d) => {
           if (d.id === action.payload.id) {
             return { ...d,...action.payload }
@@ -133,23 +134,27 @@ import {
         })
         return {
           ...state,
-          updateBasketItem: {
+          updateWishlistItem: {
             laoding: true,
             error: false,
           },
           data: [...updated]
         }
       }
-      case UPDATE_BASKET_ITEMS_ERROR: {
+      case UPDATE_WISHLIST_ITEMS_ERROR: {
         return {
           ...state,
-          updateBasketItem: {
+          updateWishlistItem: {
             laoding: false,
             error: true,
           }
         }
       }
-  
+      case RESET_WISHLIST_ITEMS :{
+        return {
+          data:[]
+        }
+      }
   
       default: {
         return state;

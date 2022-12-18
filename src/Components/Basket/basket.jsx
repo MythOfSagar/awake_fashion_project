@@ -2,7 +2,8 @@ import { Box,Text, Button, Heading} from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {Link, useNavigate} from "react-router-dom"
-import { getbasketData, remove_BasketItem } from '../../redux/basket/basket.action'
+import { getbasketData, remove_BasketItem } from '../../redux/basket_Items/basket.action'
+import Footer from '../Footer/Footer'
 
 import BasketItem from './basketItem'
 import PriceCalculated from './PriceCalculated'
@@ -10,8 +11,9 @@ import PriceCalculated from './PriceCalculated'
 const Basket = () => {
 
   const isAuth=useSelector(store=>store.basketreducer.isAuth)
-  const basketData=useSelector(store=>store.basketreducer.basket)
+  const data=useSelector(store=>store.basketreducer.basket)
   
+  const [basketData,setData]=useState([])
 
  const navigate=useNavigate()
 
@@ -26,8 +28,9 @@ useEffect(()=>{
   if(count===0){
     dispatch(getbasketData())
   }
-  if(basketData.length===0 || quanityPrice.length===0){setCount(prev=>prev+1)}
+  if(data.length===0 || quanityPrice.length===0){setCount(prev=>prev+1)}
 
+  setData(data)
   
   setquanityPrice(basketData.map((el)=>({price:el.price,qty:1,id:el.id})))
 
@@ -76,7 +79,8 @@ const removeItem=(id)=>{
 
 const bData=basketData.filter((item)=>item.id!==id)
 
- dispatch(remove_BasketItem(bData))
+ dispatch(remove_BasketItem(bData,id))
+ setData(bData)
 
 setSum(bData.map((el)=>({price:el.price,qty:1,id:el.id})))
 setquanityPrice(bData.map((el)=>({price:el.price,qty:1,id:el.id})))
@@ -99,6 +103,7 @@ const setSum = (arr) => {
 if(isAuth===false){navigate("/")}
 
   return (
+    <>
     <Box
     padding={{ base: '15px', md: '30px', lg: '56px' }}>
       <Box
@@ -112,6 +117,7 @@ if(isAuth===false){navigate("/")}
       </Box>
       <Box display="flex">
     <Box
+    width={{lg: '55%'}}
     marginTop={{ base: '110px', md: '150px', lg: '80px' }}
     marginBottom={{ base: '90px', md: '90px', lg: '56px' }}>  
       {basketData.map((item)=>
@@ -124,7 +130,7 @@ if(isAuth===false){navigate("/")}
       colour={item.color}
       size={item.size}
       price={item.price}
-      imgSrc={item.images[0]}
+      imgSrc={item.images ? item.images[0] : item.img[0]}
       ></BasketItem>)}
     </Box>
     <Box display={{ base: 'none', md: 'none', lg: 'block' }}>
@@ -159,6 +165,8 @@ if(isAuth===false){navigate("/")}
       disabled={numberOfProducts===0}>PROCEED</Button></Link></Box>
     </Box>
     </Box>
+    <Footer></Footer>
+    </>
   )
 }
 

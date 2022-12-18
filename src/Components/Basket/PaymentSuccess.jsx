@@ -1,6 +1,7 @@
 import { Heading, Image, Text,Box } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import {useNavigate} from "react-router-dom"
+import Footer from '../Footer/Footer'
 
 
 const PaymentSuccess = () => {
@@ -11,7 +12,7 @@ const PaymentSuccess = () => {
         setInterval(()=>setTime(prev=>prev-1),1000)
          setTimeout(()=>navigate("/"),7000)
     },[])
-  return (
+  return (<>
     <Box align="center">
         <Image
          width={{ base: '300px', md: '600px', lg: '700px' }}
@@ -19,6 +20,7 @@ const PaymentSuccess = () => {
          <Heading>Process Completed</Heading>
          <Text>Redirecting you to HomePage in {time} seconds</Text>
     </Box>
+    <Footer></Footer></>
   )
 }
 

@@ -11,9 +11,10 @@ const Footer = () => {
   return (
     <>
       <Box
+      backgroundColor={"white"}
         borderTop={"1px solid rgb(236, 237, 235);"}
         w={"100%"}
-        marginTop={"10rem"}
+        marginTop={"1rem"}
         marginBottom={"1rem"}
       >
         <Box

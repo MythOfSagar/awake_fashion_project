@@ -1,6 +1,8 @@
 import { Box, Button, Heading, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import Footer from '../Footer/Footer'
 import Payment from './payment'
+
 
 const Shipping = () => {
 
@@ -51,7 +53,7 @@ const Shipping = () => {
 
 }
 
-  return (
+  return (<>
     <Box padding={"15px"}
     marginTop={{ base: '60px', md: '90px', lg: '56px' }}
     >
@@ -153,6 +155,7 @@ const Shipping = () => {
         </Box>
         : <Payment></Payment>}
     </Box>
+    <Footer></Footer></>
   )
 }
 

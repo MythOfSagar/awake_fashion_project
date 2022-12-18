@@ -4,19 +4,15 @@ import Productcard from './Productcard'
 import Footer from '../Components/Footer/Footer'
 import { useEffect,useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {womensproduct} from '../redux/action'
-const Wproducts = () => {
-    // const [price,setprice]=useState('')
+import {mensproduct} from '../redux/action'
+const Mproducts = () => {
     const [pfilter,setpfilter]=useState([])
     console.log(pfilter)
-    // console.log(price)
-    const data=useSelector((store)=>store.reducer.womens)
+    const data=useSelector((store)=>store.reducer.mens)
     const loading=useSelector((store)=>store.reducer.loading)
     const dispatch=useDispatch()
-    // console.log(store)
     useEffect(()=>{
-        dispatch(womensproduct())
-        console.log(data)
+        dispatch(mensproduct())
     },[])
 
     const handlechange=(e)=>{
@@ -29,18 +25,6 @@ const Wproducts = () => {
         setpfilter(pricefilter)
         }
     }
-    // const filteralldata=(val)=>{
-    //     console.log(pfilter)
-       
-    // }
-
-    // if(loading){
-    //     return(
-    //         // <div style={{height:'600px',display:'flex',justifyContent:'center',alignItems:'center'}}>
-    //             <img style={{width:'100px',margin:'auto'}} src="https://c.tenor.com/0iK9a1WkT40AAAAC/loading-white.gif" alt="" />
-    //         // </div>
-    //     )
-    // }
   return (
     <div>
         <div className='filters'>
@@ -53,7 +37,7 @@ const Wproducts = () => {
             </select>
         </div>
         <div className='filters'>
-        <select name="price" onChange={handlechange}  >
+            <select name="price" onChange={handlechange}  >
                 <option value="">Select by price</option>
                 <option value="all">All</option>
                 <option value="500">below 500</option>
@@ -80,20 +64,5 @@ const Wproducts = () => {
   )
 }
 
-export default Wproducts
+export default Mproducts
 
-
-       // const [product,setproduct]=useState([])
-    //  const womensproduct=()=>{
-    //     let res=axios.get('https://fashion-database-api.vercel.app/Women')
-    //     .then((res)=>{
-    //         console.log(res.data)
-    //         setproduct(res.data)
-    //     })
-    //     .catch((e)=>{
-    //         console.log(e)
-    //     })
-    // }
-    // useEffect(()=>{
-    //     womensproduct()
-    // },[])
