@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import Footer from "../Footer/Footer";
 import SliderShow1 from "./SlideShow/SliderShow1";
 import SlideShow2 from "./SlideShow/SlideShow2";
 
@@ -852,6 +853,7 @@ const HomePage = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };

@@ -16,6 +16,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Input,
+  Image,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -25,9 +26,13 @@ import {
 } from "@chakra-ui/icons";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import logo from "../../Assets/logo.png";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
+  const isAuth = useSelector((store) => store.basketreducer.isAuth);
+  const user = useSelector((store) => store.basketreducer.user);
 
   return (
     <Box position={"fixed"} top={0} left={0} w={"100%"} zIndex={100}>
@@ -64,14 +69,19 @@ const Navbar = () => {
               fontWeight={600}
               fontSize={{ base: "16.5px", md: "2xl" }}
               borderRadius={"5px"}
-              px={{ base: 1, md: 2 }}
+              px={{ base: 2, md: 4 }}
               bgGradient="linear-gradient(21deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
               mr={{ base: "6px", md: "0px" }}
+              py={"2px"}
             >
-              Awake Fashion
+              <Image
+                src={logo}
+                width={{ base: 100, md: 150 }}
+                height={"auto"}
+              />
             </Text>
           </Link>
 
@@ -95,20 +105,20 @@ const Navbar = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Link to={"/"}>
+          <Link to={"/signIn"}>
             <Button
               fontSize={"18px"}
               fontWeight={600}
               variant={"link"}
               color={"black"}
             >
-              Login
+              {isAuth ? `Welcome ${user}` : "Login"}
             </Button>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/wishlistPage"}>
             <FiHeart size={24} color={"black"} />
           </Link>
-          <Link to={"/"}>
+          <Link to={"/basket"}>
             <AiOutlineShoppingCart size={24} color={"black"} />
           </Link>
         </Stack>
@@ -236,12 +246,14 @@ const MobileNavItem = ({ label, children, href }) => {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
-          {label}
-        </Text>
+        <Link to={href}>
+          <Text
+            fontWeight={600}
+            color={useColorModeValue("gray.600", "gray.200")}
+          >
+            {label}
+          </Text>
+        </Link>
         {children && (
           <Icon
             as={ChevronDownIcon}
@@ -277,66 +289,66 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Women",
-    children: [
-      {
-        label: "Ethnic & Fusion Wear",
-        href: "/",
-      },
-      {
-        label: "Western Wear",
-        href: "/",
-      },
-      {
-        label: "Lingerie/Sleepwear",
-        href: "/",
-      },
-      {
-        label: "SportsWear",
-        href: "/",
-      },
-      {
-        label: "Top Brands",
-        href: "/",
-      },
-      {
-        label: "Winter wear",
-        href: "/",
-      },
-    ],
+    // children: [
+    //   {
+    //     label: "Ethnic & Fusion Wear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Western Wear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Lingerie/Sleepwear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "SportsWear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Top Brands",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Winter wear",
+    //     href: "/",
+    //   },
+    // ],
     href: "/womens",
   },
   {
     label: "Men",
-    children: [
-      {
-        label: "Topwear",
-        href: "/",
-      },
-      {
-        label: "Activewear",
-        href: "/",
-      },
-      {
-        label: "Innerwear",
-        href: "/",
-      },
-      {
-        label: "Bottomwear",
-        href: "/",
-      },
-      {
-        label: "Watches",
-        href: "/",
-      },
-      {
-        label: "Shoes",
-        href: "/",
-      },
-      {
-        label: "Activewear",
-        href: "/",
-      },
-    ],
+    // children: [
+    //   {
+    //     label: "Topwear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Activewear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Innerwear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Bottomwear",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Watches",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Shoes",
+    //     href: "/",
+    //   },
+    //   {
+    //     label: "Activewear",
+    //     href: "/",
+    //   },
+    // ],
     href: "/mens",
   },
   {
@@ -344,8 +356,8 @@ const NAV_ITEMS = [
     href: "/kids",
   },
   {
-    label: "Shoes And Bags",
-    href: "/",
+    label: "Beauty",
+    href: "/beauty",
   },
 ];
 
