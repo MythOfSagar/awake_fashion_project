@@ -357,4 +357,4 @@ const WishlistPage = () => {
   )
 }
 
-export default WishlistPage
+export default WishlistPage 
