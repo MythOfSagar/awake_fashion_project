@@ -1,14 +1,14 @@
-# Welcome to  <img src="https://www.dealsshutter.com/uploads/giftcard/stores/lifestyle-logopng-1544529875.png" width="100px">  Clone! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+# Welcome to Awake Fashion <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 ---
 
 **Introduction**
 ---
 This is our Fifth Construct Week Project at Masai School's Full Stack Web Development Course. We are currently at the end of fifth unit where we need to make projects as per mastery based progression environment of Masai School after learnig certain tech-tools and in fifth unit we have learnt React and Redux for Front-end and state management respectively.
-Awake Fashion is India’s leading fashion destination for the latest trends. Part of Dubai-based retail and hospitality The Landmark Group, Lifestyle brings multiple categories including men's, women's, and kids’ apparel, footwear, handbags, fashion accessories, and beauty under the convenience of a single roof. Currently, Lifestyle is present across 77 stores, in 44 cities and delivers to over 26000 pin codes. Lifestyle is a true omnichannel player with its online store lifestylestores.com where customers can shop from the convenience of their homes.
+Awake Fashion is India’s leading fashion destination for the latest trends. Part of Dubai-based retail and hospitality The Landmark Group, Lifestyle brings multiple categories including men's, women's, and kids’ apparel, footwear, handbags, fashion accessories, and beauty under the convenience of a single roof. 
 ##  Tech-stack used
   
    ```
-   Frontend : React JS
+   Frontend : React JS, Chakra-UI
    
    State Management : Redux
    
