@@ -1,5 +1,0 @@
-export const GET_WOMENS_PRODUCT_SUCCESS='getwomensproductssuccess'
-export const GET_WOMENS_PRODUCT_ERROR='getwomensproductserror'
-export const GET_WOMENS_PRODUCT_LOADING='getwomensproductsloading'
-
-
