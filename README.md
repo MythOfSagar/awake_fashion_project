@@ -14,15 +14,7 @@ Awake Fashion is India’s leading fashion destination for the latest trends. Pa
    
    DataBase   : JSON
    ```
- ## Team members and contribution
-
- | Team Member            | Contribution                                                              |
-| ----------------- | ------------------------------------------------------------------ |
-| Avinash Patel | Home Page with Sliders and Product API |
-| Sagar Wankhade | Signup, Login Page And Cart Page |
-| Abhishek | Product's Detailed Page, Admin Page, And Shop Later Page |
-| Rahul | Beauty Page |
-| Manoj Mogal | Men's Page, Women Page, And Kids Page |
+ 
 
 ## Features
 
