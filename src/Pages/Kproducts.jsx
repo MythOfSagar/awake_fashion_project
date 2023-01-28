@@ -8,9 +8,9 @@ import { kidsproduct, mensproduct } from "../redux/action";
 import Kidsproductcard from "./Kidsproductcard";
 const Kproducts = () => {
   const [pfilter, setpfilter] = useState([]);
-  console.log(pfilter);
+  // console.log(pfilter);
   const data = useSelector((store) => store.reducer.kids);
-  console.log(data);
+  // console.log(data);
   const loading = useSelector((store) => store.loading);
   const dispatch = useDispatch();
   useEffect(() => {

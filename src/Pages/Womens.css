@@ -5,7 +5,18 @@
     margin: auto;
     
 }
-.corner>h3{
+.slider{
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+}
+.borderdivdeals{
+    height: 4px;
+    width: 4%;
+    background-color: #faa619;
+    
+}
+.corner h3{
     /* text-align: center; */
     font-size: 25px;
     padding-top: 10px;
@@ -27,9 +38,13 @@
     text-align: center;
 }
 .cornercard>div{
-    /* height: 180px; */
+    height: 100%;
+    width: 100%;
     border: 3px solid red;
-    padding: 55px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .cornerc>div{
     border: 3px solid red;
@@ -38,6 +53,8 @@
 .cornercard>div h3,.cornerc h3{
     font-size: 30px;
     font-weight: 700;
+   
+    /* border: 1px solid white; */
     /* margin: auto; */
 }
 .cornercard>div h4,.cornerc h4{
@@ -57,9 +74,15 @@
     font-size: 25px;
     padding-top: 20px;
     font-weight: 600;
-    margin-left: 9.5%;
+    margin-left: 10%;
 }
-.winterwear>div{
+.borderdiv{
+    height: 4px;
+    width: 4%;
+    background-color: #faa619;
+    margin-left:10%;
+}
+.borderdiv+div{
     width: 80%;
     margin: auto;
     display: grid;
@@ -67,13 +90,19 @@
     gap: 30px;
     text-align: center;
     padding-top: 40px;
+    
 }
 .winterwear>div>div div{
     height: 150px;
     width: 150px;
-    /* border: 1px solid rebeccapurple; */
     margin: auto;
 
+
+}
+.winterwear>div+div>div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 5px;
+    border-radius: 4px;
 }
 .winterwear img{
     height: 100%;
@@ -83,7 +112,7 @@
 .winterwear p{
     margin-top: 10px;
 }
-.ethnicwear>div,.trendybottom>div{
+.borderdiv+div,.borderdiv+div{
     width: 80%;
     margin: auto;
     display: grid;
@@ -119,7 +148,14 @@
 .textdiv>p:nth-child(2){
     color: rgb(194, 194, 51);
 }
-.toppics>div,.activewear>div{
+.toppics>div+div{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 40px;
+}
+.activewear>div+div{
     width: 80%;
     margin: auto;
     display: grid;
@@ -148,7 +184,7 @@
     color: rgb(194, 194, 51);
     margin: auto;
 }
-.shopbycategory>div{
+.shopbycategory>div+div{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -163,12 +199,12 @@
     object-fit: fill;
 }
 
-.bestseller>div{
+.bestseller>div+div{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 80%;
     margin: auto;
-    margin-top: 40px;
+    /* margin-top: 20px; */
 }
 .mensbottom{
     display: flex;
@@ -184,14 +220,15 @@
     .cornerchild{
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        
     }
-    .winterwear>div,.ethnicwear>div,.trendybottom>div,
-    .shopbycategory>div{
+    .winterwear>div+div,.ethnicwear>div+div,.trendybottom>div+div,
+    .shopbycategory>div+div{
         width: 90%;
         display: grid;
         grid-template-columns: repeat(3,1fr);
     }
-    .toppics>div,.activewear>div{
+    .toppics>div+div,.activewear>div+div{
         width: 90%;
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -201,6 +238,13 @@
         font-size: 25px;
         padding-top: 20px;
         font-weight: 600;
+        margin-left: 5%;
+    }
+    .borderdivdeals{
+        width: 7%;
+    }
+    .borderdiv{
+        width: 7%;
         margin-left: 5%;
     }
     .onlyimg>img,.flashsale img,.shopnow img,.firsttime img,.dealsimg img{
@@ -215,16 +259,23 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
-    .winterwear>div,.ethnicwear>div,.trendybottom>div,
-    .shopbycategory>div{
+    .winterwear>div+div,.ethnicwear>div+div,.trendybottom>div+div,
+    .shopbycategory>div+div{
         width: 90%;
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
-    .toppics>div,.activewear>div{
+    .toppics>div+div,.activewear>div+div{
         width: 90%;
         display: grid;
         grid-template-columns: repeat(1,1fr);
+    }
+    .borderdivdeals{
+        width: 10%;
+    }
+    .borderdiv{
+        width: 10%;
+        margin-left: 5%;
     }
     .bestseller>h3,.activewear>h3,.trendybottom>h3,.shopbycategory>h3,.flashsale>h3,.winterwear>h3,.ethnicwear>h3,.toppics>h3{
         text-align: left;
