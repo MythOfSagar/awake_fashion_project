@@ -7,6 +7,7 @@ import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "../Components/Footer/Footer";
+import { Link } from 'react-router-dom'
 
 const Beauty = () => {
   const settings = {
@@ -49,7 +50,6 @@ const Beauty = () => {
       },
     ],
   };
-  console.log("11111111111111111111111111");
   return (
     <>
     <div>
@@ -58,14 +58,55 @@ const Beauty = () => {
       <Box p={1} color={"#ffffff"} bg={"#FAA619"}>
         <h2 className={styles.heading}>Lakme - Min 30% off</h2>
       </Box>
+      <div className='winterwear'>
+            <h3>Beauty Products</h3>
+            <div>
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010143997-1000010143996_01-2100.jpg" alt="" />
+                    </div>
+                    <p>from ₹99</p></Link>
+                </div>
 
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/b/dbeb4e88904330900424_1.jpg" alt="" />
+                    </div>
+                    <p>from ₹129</p></Link>
+                </div>
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/4/f4aa71c6946537005757_1.jpg" alt="" />
+                    </div>
+                    <p>from ₹299</p></Link>
+                </div>
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/3/1359f328904245710668_1a.jpg" alt="" />
+                    </div>
+                    <p>from ₹499</p></Link>
+                </div>
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/c/1c25c07816652022679.jpg" alt="" />
+                    </div>
+                    <p>from ₹299</p></Link>
+                </div>
+                <div>
+                <Link to='/womensproduct'><div>
+                        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/2/12bba208906027070991_1.jpg" alt="" />
+                    </div>
+                    <p>from ₹189</p></Link>
+                </div>
+            </div>
+        </div>
       {/* Slider */}
       <Box p={"32px 0 0 0 "} w={"80%"} m={"auto"} h={50}>
         <Slider {...settings}>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -77,8 +118,8 @@ const Beauty = () => {
           </Box>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -90,8 +131,8 @@ const Beauty = () => {
           </Box>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -103,8 +144,8 @@ const Beauty = () => {
           </Box>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -116,8 +157,8 @@ const Beauty = () => {
           </Box>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -129,8 +170,8 @@ const Beauty = () => {
           </Box>
           <Box
             textDecoration={"none"}
-            as={"a"}
-            href="/beauty/products"
+
+            href="#"
             style={{
               backgroundColor: "#FFFFFF",
             }}
@@ -153,8 +194,8 @@ const Beauty = () => {
       >
         <Box
           textDecoration={"none"}
-          as={"a"}
-          href="/beauty/products"
+
+          href="#"
           p={"0 0 26px 0"}
         >
           <Image
@@ -168,8 +209,8 @@ const Beauty = () => {
       <Stack m={"auto"} w={"80%"} pt={"40px"}>
         <Box
           textDecoration={"none"}
-          as={"a"}
-          href="/beauty/products"
+
+          href="#"
           p={"0 0 56px 0"}
           borderBottom={"1px solid #ecedeb"}
         >
@@ -184,8 +225,8 @@ const Beauty = () => {
       <Stack m={"auto"} w={"80%"} pt={"40px"}>
         <Box
           textDecoration={"none"}
-          as={"a"}
-          href="/beauty/products"
+          
+          href="#"
           p={"0 0 56px 0"}
           borderBottom={"1px solid #ecedeb"}
         >
@@ -221,8 +262,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -234,8 +275,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -247,8 +288,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -260,8 +301,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -273,8 +314,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -286,8 +327,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -326,8 +367,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -347,8 +388,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -368,8 +409,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -389,8 +430,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -410,8 +451,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -431,8 +472,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -479,8 +520,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -500,8 +541,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -521,8 +562,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -542,8 +583,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -563,8 +604,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -584,8 +625,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -611,8 +652,8 @@ const Beauty = () => {
       <Stack m={"auto"} w={"80%"} pt={"57px"}>
         <Box
           textDecoration={"none"}
-          as={"a"}
-          href="/beauty/products"
+
+          href="#"
           p={"0 0 56px 0"}
           borderBottom={"1px solid #ecedeb"}
         >
@@ -648,8 +689,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -661,8 +702,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -674,8 +715,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -714,8 +755,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -727,8 +768,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -740,8 +781,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -780,8 +821,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -793,8 +834,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -806,8 +847,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -846,8 +887,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -859,8 +900,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -872,8 +913,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -912,8 +953,8 @@ const Beauty = () => {
           >
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -925,8 +966,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
@@ -938,8 +979,8 @@ const Beauty = () => {
             </Box>
             <Box
               textDecoration={"none"}
-              as={"a"}
-              href="/beauty/products"
+
+              href="#"
               pl={"8px"}
               pr={"8px"}
             >
