@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 import { addtocart } from '../redux/action'
 import './Productcard.css'
 import { useToast } from '@chakra-ui/react'
+import { useDispatch } from 'react-redux'
+
 const Productcard = ({item}) => {
+  const dispatch = useDispatch();
+
+
     const {images,price,off_price,id,title}=item
   const toast=useToast()
   const handleaddtocart=()=>{
-    addtocart(item)
+    dispatch(addtocart(item))
     toast({
         title: "Added to Cart",
         status: "success",

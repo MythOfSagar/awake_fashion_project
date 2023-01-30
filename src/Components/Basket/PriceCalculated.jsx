@@ -4,9 +4,9 @@ import {Link} from "react-router-dom"
 
 const PriceCalculated = ({price}) => {
   return (
-    <div style={{zIndex:9999,fontWeight:"bolder"}}>
+    <div style={{zIndex:9999,fontWeight:"bolder"}} >
     <Box  backgroundColor={"white"} 
-    fontSize={20} position={"fixed"} marginLeft={"150px"} marginTop={"100px"} width={300}>
+    fontSize={20} position={"relative"} marginLeft={"150px"} marginTop={"100px"} width={300}>
         <Box display={"flex"}><Text>Total MRP</Text><Spacer/><Text>{price+(0.3*price)}</Text></Box>
         <Box display={"flex"}><Text>Offer discount</Text><Spacer/><Text>{
         (-0.3*price).toFixed(2)
