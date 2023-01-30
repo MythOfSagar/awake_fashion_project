@@ -87,7 +87,7 @@ const Kids = () => {
                         <img src="https://tse1.mm.bing.net/th?id=OIP._AxzuP33WclvCabavOTPTgHaI4&pid=Api&P=0" alt="" />
                     </div>
                     <p>Upto 50% off</p>
-                    <p>Boy's Polycotton Hooded Sweatshirt</p>
+                    {/* <p>Boy's Polycotton Hooded Sweatshirt</p> */}
                     </Link>
                 </div>
 
@@ -96,7 +96,7 @@ const Kids = () => {
                         <img src="https://tse3.mm.bing.net/th?id=OIP.vxqTsuTSYioFsxc5R3nsygHaHa&pid=Api&P=0" alt="" />
                     </div>
                     <p>Upto 20% off</p>
-                    <p>Girls's Jacket</p>
+                    {/* <p>Girls's Jacket</p> */}
                     </Link>
                 </div>
                 <div>
@@ -104,7 +104,7 @@ const Kids = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.FaTvskgCsWkxcw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 40% off</p>
-                    <p>Boy's jacket</p>
+                    {/* <p>Boy's jacket</p> */}
                     </Link>
                 </div>
                 <div>
@@ -112,7 +112,7 @@ const Kids = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.tBNAZqzY0h3lAA474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 60% off</p>
-                    <p>Boys Polyester Hooded Neck Hoodie</p>
+                    {/* <p>Boys Polyester Hooded Neck Hoodie</p> */}
                     </Link>
                 </div>
                 <div>
@@ -120,7 +120,7 @@ const Kids = () => {
                         <img src="https://tse2.mm.bing.net/th?id=OIP.AGhfl_oHTDDGtGm9om4t6gHaIZ&pid=Api&P=0" alt="" />
                     </div>
                     <p>Upto 30% off</p>
-                    <p>Girls winter wear jacket full sleeve</p>
+                    {/* <p>Girls winter wear jacket full sleeve</p> */}
                     </Link>
                 </div>
                 <div>
@@ -128,7 +128,7 @@ const Kids = () => {
                         <img src="https://tse3.mm.bing.net/th?id=OIP.97irfPUv-xyTpLNwosO-swHaLH&pid=Api&P=0" alt="" />
                     </div>
                     <p>Upto 50% off</p>
-                    <p>Kids Boys Regular Fit Hodded Bomber Jacket</p>
+                    {/* <p>Kids Boys Regular Fit Hodded Bomber Jacket</p> */}
                     </Link>
                 </div>
             </div>

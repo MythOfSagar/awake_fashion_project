@@ -78,7 +78,8 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.1q6AG0YkGNQGbw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹699</p>
-                    <p>Women brown Oversized Zip-Through jacket</p></Link>
+                    {/* <p>Women brown Oversized Zip-Through jacket</p> */}
+                    </Link>
                 </div>
 
                 <div>
@@ -86,7 +87,7 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.jWCKtektwZ7fyQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹799</p>
-                    <p>Women Blue Zip-Through Hoodie</p>
+                    {/* <p>Women Blue Zip-Through Hoodie</p> */}
                     </Link>
                 </div>
                 <div>
@@ -94,7 +95,7 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.759z%2fpBOCR2IfQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹999</p>
-                    <p>Nylon Blend Quilted Stylish Regular Fit Puffer Winter Jacket for Women</p>
+                    {/* <p>Nylon Blend Quilted Stylish Regular Fit Puffer Winter Jacket for Women</p> */}
                     </Link>
                 </div>
                 <div>
@@ -102,7 +103,7 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.IMe0ungf4za01A474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹1299</p>
-                    <p>Women's/Girl's Sherpa Stylish Fleece Jacket</p>
+                    {/* <p>Women's/Girl's Sherpa Stylish Fleece Jacket</p> */}
                     </Link>
                 </div>
                 <div>
@@ -110,7 +111,7 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.JfatmIIsAy97lQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹729</p>
-                    <p>Women's Solid Regular Jacket</p>
+                    {/* <p>Women's Solid Regular Jacket</p> */}
                     </Link>
                 </div>
                 <div>
@@ -118,7 +119,7 @@ const Womens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.iCXTyV%2fqyeN1Xw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>from ₹859</p>
-                    <p>Full Sleeve Solid Women Long Jacket</p>
+                    {/* <p>Full Sleeve Solid Women Long Jacket</p> */}
                     </Link>
                 </div>
             </div>
