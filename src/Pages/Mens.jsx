@@ -77,7 +77,8 @@ const Mens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.C4dEhRf9fcrSBw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 50% off</p>
-                    <p>Men Solid Jacket</p></Link>
+                    {/* <p>Men Solid Jacket</p> */}
+                    </Link>
                 </div>
 
                 <div>
@@ -85,7 +86,7 @@ const Mens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.yoPM8RRP9tkg3Q474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 40% off</p>
-                    <p>Men's Quilted Bomber Jacket</p>
+                    {/* <p>Men's Quilted Bomber Jacket</p> */}
                     </Link>
                 </div>
                 <div>
@@ -93,7 +94,7 @@ const Mens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.jeG%2f5u5CcyvE8g474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 20% off</p>
-                    <p>Printed Men Round Neck Full Sleeve T-Shirt</p>
+                    {/* <p>Printed Men Round Neck Full Sleeve T-Shirt</p> */}
                     </Link>
                 </div>
                 <div>
@@ -101,7 +102,7 @@ const Mens = () => {
                         <img src="https://tse4.mm.bing.net/th?id=OIP.H2beENqaAte0_fP4u1-_AgHaJQ&pid=Api&P=0" alt="" />
                     </div>
                     <p>Upto 30% off</p>
-                    <p>Men's Regular Fit Cotton Jacket for Winter Wear </p>
+                    {/* <p>Men's Regular Fit Cotton Jacket for Winter Wear </p> */}
                     </Link>
                 </div>
                 <div>
@@ -109,7 +110,7 @@ const Mens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.d7bNsKmUiYckQQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 50% off</p>
-                    <p>Printed Men Round Neck Full Sleeve T-Shirt</p>
+                    {/* <p>Printed Men Round Neck Full Sleeve T-Shirt</p> */}
                     </Link>
                 </div>
                 <div>
@@ -117,7 +118,7 @@ const Mens = () => {
                         <img src="https://sp.yimg.com/ib/th?id=OPA.tleyh614cd7sgQ474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
                     <p>Upto 60% off</p>
-                    <p>Men's Solid Black Dri-Fit Zip Through Activewear Jacket</p>
+                    {/* <p>Men's Solid Black Dri-Fit Zip Through Activewear Jacket</p> */}
                     </Link>
                 </div>
             </div>
