@@ -9,6 +9,7 @@ import {
 import BasketItem from "./basketItem";
 import PriceCalculated from "./PriceCalculated";
 import { useToast } from "@chakra-ui/react";
+import Footer from "../Footer/Footer";
 
 const Basket = () => {
   const isAuth = useSelector((store) => store.basketreducer.isAuth);
@@ -209,6 +210,7 @@ const Basket = () => {
           </Box>
         </Box>
       </Box>
+    <Footer/>
     </>
   );
 };
