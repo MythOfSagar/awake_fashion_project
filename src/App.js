@@ -6,6 +6,7 @@ import PauseOnHover from "./Pages/Mensslider";
 import Productcard from "./Pages/Productcard";
 import Womens from "./Pages/Womens";
 import Wproducts from "./Pages/Wproducts";
+import Bproducts from "./Pages/Bproducts";
 function App() {
   return (
     <>

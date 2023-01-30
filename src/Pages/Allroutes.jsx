@@ -16,6 +16,7 @@ import HomePage from "../Components/HomePage/HomePage";
 import SingleProduct from "./SingleProduct";
 import Products from "./Products";
 import Beauty from "./Beauty";
+import Bproducts from "./Bproducts";
 
 const Allroutes = () => {
   return (
@@ -32,6 +33,7 @@ const Allroutes = () => {
         <Route path="/kidsproduct" element={<Kproducts />}></Route>
         <Route path="/womensproduct" element={<Wproducts />}></Route>
         <Route path="/mensproduct" element={<Mproducts />}></Route>
+        <Route path="/BeautyProduct" element={<Bproducts />}></Route>
 
         <Route path="/kids" element={<Kids />}></Route>
         <Route path="/mens" element={<Mens />}></Route>
