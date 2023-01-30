@@ -9,10 +9,9 @@ const Productcard = ({item}) => {
   const handleaddtocart=()=>{
     addtocart(item)
     toast({
-        title: "Add to Cart",
-        description: "Successfully Added to Cart",
+        title: "Added to Cart",
         status: "success",
-        duration: 2000,
+        duration: 1000,
         position: "top",
         isClosable: true,
       })
