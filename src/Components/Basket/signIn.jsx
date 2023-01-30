@@ -1,19 +1,23 @@
 import { Box, Button, FormControl,useToast ,FormLabel, Heading, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from "@chakra-ui/react"
 import axios from "axios"
 import React, { useEffect, useState } from "react"
-import { useDispatch } from "react-redux"
+
 import { useNavigate } from "react-router-dom"
 import { getRegistration, verifyOtp } from "../../redux/Authorize/action"
 import { getLocalData } from "../../redux/Authorize/Local"
-import { signIn } from "../../redux/basket_Items/basket.action"
+import { signIn,signOut } from "../../redux/basket_Items/basket.action"
+import { useDispatch, useSelector } from "react-redux";
 
 export function InitialFocus() {
 
   const [toggle, setToggle] = useState(true)
+  const [load,setLoad]=useState(false)
   const [email, setEmail] = useState("")
   const [userName, setName] = useState("")
   const [pass, setPass] = useState("")
   const [otp, setOtp] = useState("")
+
+  const isAuth = useSelector((store) => store.basketreducer.isAuth);
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -42,6 +46,13 @@ export function InitialFocus() {
   }
 
   const handleClick = () => {
+    if(isAuth){
+      onClose()
+      dispatch(signOut())
+      navigate("/")
+    }
+    else{
+    setLoad(true)
     if (toggle) {
           
       axios.post("https://handsome-blue-crab.cyclic.app/user/login", {
@@ -52,6 +63,7 @@ export function InitialFocus() {
       })
         .then((res) => {
                if(res.data.message==="Password doesnot match."){
+                setLoad(false)
                 toast({
                   title: `Enter Correct Password`,
                   position: 'top',
@@ -64,7 +76,7 @@ export function InitialFocus() {
 
             dispatch(signIn(userName))
             setToggle(!toggle)
-
+            setLoad(false)
             toast({
               title: `Sign IN Successfully`,
               position: 'top',
@@ -77,6 +89,7 @@ export function InitialFocus() {
             navigate("/")
           }
           else{
+            setLoad(false)
             toast({
               title: `OTP sent to your Email Address`,
               position: 'top',
@@ -107,6 +120,7 @@ export function InitialFocus() {
           if (res.data.status === "VERIFIED") {
 
             dispatch(signIn(userName))
+            setLoad(false)
 
             toast({
               title: `Successfully Registered`,
@@ -121,6 +135,7 @@ export function InitialFocus() {
             navigate("/")
           }
           else{
+            setLoad(false)
             toast({
               title: `Please Enter correct OTP`,
               position: 'top',
@@ -131,7 +146,7 @@ export function InitialFocus() {
           }
         })
     }
-
+  }
   }
 
   const initialRef = React.useRef(null)
@@ -145,20 +160,22 @@ export function InitialFocus() {
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={()=>navigate("/")}
 
       >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader><Heading
             fontSize={{ base: '26px', md: '35px', lg: '35px' }}
-          >SIGN UP OR SIGN IN</Heading></ModalHeader>
-
+          >{isAuth ? "SIGN OUT" : "SIGN UP OR SIGN IN"}</Heading></ModalHeader>
+           
+           {!isAuth ?  
           <ModalBody pb={6} >
             <FormControl>
               <Text color={"teal.400"}>Enjoy the convenience of a single account across all participating brands</Text>
               <FormLabel>{toggle ? "Email Address" : "Verify with OTP"}</FormLabel>
               <Input ref={initialRef}
+                 type={toggle ? "email" : "number"}
                 onChange={handleChange}
                 value={toggle ? email : otp}
                 name={toggle ? "email" : "otp"}
@@ -173,8 +190,9 @@ export function InitialFocus() {
                 />
                 <Text>Password</Text>
                 <Input ref={initialRef}
-                  placeholder='Enter your Password'
+                  placeholder='Must contain upper/lowerCase char, number, special char'
                   onChange={handleChange}
+                  type="password"
                   value={pass}
                   name="pass"
                 /></> : <></>}
@@ -184,15 +202,18 @@ export function InitialFocus() {
 
             </FormControl>
           </ModalBody>
+          : <></> }
 
           <ModalFooter display={toggle ? "block" : "block"}>
             <Button background={"orange.300"}
+            isLoading={load}
+            loadingText={toggle ? 'Processing' : "Verifying OTP"}
               color="whiteAlpha"
               width={{ base: '150px', md: '300px', lg: '200px' }}
               align="center" mr={3}
               onClick={handleClick}
             >
-              Continue
+              {isAuth ? "Sign Out" : "Continue"}
             </Button>
             <Button onClick={() => navigate("/")}>Cancel</Button>
           </ModalFooter>

@@ -5,3 +5,4 @@ export const GET_BASKET_LOADING = "getbasketloading";
 export const remove_BASKET_ITEM = "remove_BASKET_ITEM";
 
 export const SIGN_IN = "SIGN_IN";
+export const SIGN_OUT = "SIGN_OUT";

@@ -4,7 +4,7 @@ import {
   GET_BASKET_LOADING,
   GET_BASKET_SUCCESS,
   remove_BASKET_ITEM,
-  SIGN_IN,
+  SIGN_IN,SIGN_OUT,
 } from "./basket.actiontypes";
 
 export const getbasketData = () => async (dispatch) => {
@@ -24,6 +24,9 @@ export const getbasketData = () => async (dispatch) => {
 
 export const signIn = (user) => (dispatch) => {
   dispatch({ type: SIGN_IN, payload: user });
+};
+export const signOut = () => (dispatch) => {
+  dispatch({ type: SIGN_OUT });
 };
 
 export const remove_BasketItem = (data, id) => async (dispatch) => {
