@@ -55,12 +55,13 @@ const Beauty = () => {
     <div>
       {/* <Navbar/> */}
       {/* Yellow Part */}
+      
       <Box p={1} color={"#ffffff"} bg={"#FAA619"}>
         <h2 className={styles.heading}>Lakme - Min 30% off</h2>
       </Box>
       <div className='winterwear'>
-            <h3>Beauty Products</h3>
-            <div>
+
+            <div className="front-image">
                 <div>
                 <Link to='/BeautyProduct'><div>
                         <img src="https://lmsin.net/cdn-cgi/image/h=1125,w=1125,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010143997-1000010143996_01-2100.jpg" alt="" />
