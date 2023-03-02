@@ -1,39 +1,46 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../Components/Footer/Footer'
-import Kidsslider from './Kidsslider'
+import Kslider from './Kslider'
 import './Womens.css'
 
 const Kids = () => {
   return (
     <div className='womens' >
-        <div>
-            <Kidsslider/>
+        <div className='slider'>
+            <Kslider/>
         </div>
         <div className='corner'>
           <h3>Deals Corner</h3>
+          <div className='borderdivdeals' ></div>
             <div className='cornerchild'>
                 <div className='cornercard'>
                   <div>
-                    <h4>Buy 2 at</h4>
-                    <h3>60% off</h3>
-                  </div>
-                </div>
-                <div className='cornercard'>
-                  <div>
-                    <h4>Flat</h4>
-                    <h3>50% off</h3>
-                  </div>
-                </div>
-                <div className='cornercard'>
-                  <div>
-                    <h4>Flat</h4>
-                    <h3>40% off</h3>
+                    <div className='center'>
+                        <h4>Buy 2 at</h4>
+                        <h3>60% off</h3>
+                    </div>
                   </div>
                 </div>
                 <div className='cornerc'>
                   <div>
-                    <h4>Buy 1 at</h4>
+                   <h4>Buy 2 at</h4>
+                    <h3>60% off</h3>
+                    <h4>Buy 4 at</h4>
+                    <h3>40% off</h3>
+                  </div>
+                </div>
+                <div className='cornercard'>
+                  <div>
+                    <div>
+                    <h4>Flat</h4>
+                    <h3>40% off</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className='cornerc'>
+                  <div>
+                   <h4>Buy 1 at</h4>
                     <h3>60% off</h3>
                     <h4>Buy 2 at</h4>
                     <h3>40% off</h3>
@@ -41,8 +48,10 @@ const Kids = () => {
                 </div>
                 <div className='cornercard'>
                   <div>
-                    <h4>flat</h4>
+                   <div>
+                   <h4>flat</h4>
                     <h3>60% off</h3>
+                   </div>
                   </div>
                 </div>
                 <div className='cornerc'>
@@ -62,6 +71,7 @@ const Kids = () => {
        
         <div className='activewear'>
             <h3>Shop By Department</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-2-Banner-1-Kids-30Aug2022.jpg" alt="" />
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-2-Banner-2-Kids-30Aug2022.jpg" alt="" />
@@ -70,43 +80,56 @@ const Kids = () => {
         </div>
          <div className='winterwear'>
             <h3>Trending Winter Styles - Boys & Girls</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://tse1.mm.bing.net/th?id=OIP._AxzuP33WclvCabavOTPTgHaI4&pid=Api&P=0" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 50% off</p>
+                    {/* <p>Boy's Polycotton Hooded Sweatshirt</p> */}
+                    </Link>
                 </div>
 
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://tse3.mm.bing.net/th?id=OIP.vxqTsuTSYioFsxc5R3nsygHaHa&pid=Api&P=0" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 20% off</p>
+                    {/* <p>Girls's Jacket</p> */}
+                    </Link>
                 </div>
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.FaTvskgCsWkxcw474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 40% off</p>
+                    {/* <p>Boy's jacket</p> */}
+                    </Link>
                 </div>
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://sp.yimg.com/ib/th?id=OPA.tBNAZqzY0h3lAA474C474&o=5&pid=21.1&w=&h=" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 60% off</p>
+                    {/* <p>Boys Polyester Hooded Neck Hoodie</p> */}
+                    </Link>
                 </div>
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://tse2.mm.bing.net/th?id=OIP.AGhfl_oHTDDGtGm9om4t6gHaIZ&pid=Api&P=0" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 30% off</p>
+                    {/* <p>Girls winter wear jacket full sleeve</p> */}
+                    </Link>
                 </div>
                 <div>
                 <Link to='/kidsproduct'><div>
                         <img src="https://tse3.mm.bing.net/th?id=OIP.97irfPUv-xyTpLNwosO-swHaLH&pid=Api&P=0" alt="" />
                     </div>
-                    <p>Upto 50% off</p></Link>
+                    <p>Upto 50% off</p>
+                    {/* <p>Kids Boys Regular Fit Hodded Bomber Jacket</p> */}
+                    </Link>
                 </div>
             </div>
         </div>
@@ -121,6 +144,7 @@ const Kids = () => {
         </div>
         <div className='ethnicwear'>
             <h3>Shop By Category- Girls & Boys</h3>
+            <div className='borderdiv' ></div>
                 <div>
                     <div style={{backgroundImage:'url(https://tse2.mm.bing.net/th?id=OIP.cIEM5EeTjGj3SAicsTN-gwHaJ3&pid=Api&P=0)'}} >
                         <div className='textdiv'>
@@ -190,6 +214,7 @@ const Kids = () => {
         </div> */}
         <div className='toppics'>
             <h3>Must Haves</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-3-Banner-1-Kids-24Nov2022.jpg" alt="" />
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-3-Banner-2-Kids-28Nov2022.jpg" alt="" />
@@ -198,6 +223,7 @@ const Kids = () => {
         </div>
         <div className='toppics'>
             <h3>Curated Styles</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Kids-modularblock-one-img-24Nov2022.jpg" alt="" />
                 <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Kids-modularblock-two-img-24Nov2022.jpg" alt="" />
@@ -210,6 +236,7 @@ const Kids = () => {
         </div> */}
         <div className='trendybottom' >
             <h3>Trendy Bottom Wear</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <div className='mensbottom' style={{backgroundImage:'url(https://tse1.mm.bing.net/th?id=OIP.ys5OHoPYudt04LAnuMMSYAHaHa&pid=Api&P=0)'}}>
                     <img src="https://tse1.mm.bing.net/th?id=OIP.4hj_DtWj8SP52otv0SXwlwAAAA&pid=Api&P=0" alt="" />
@@ -234,6 +261,7 @@ const Kids = () => {
        
         <div className='activewear'>
             <h3>Occasion Wear</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-6-Banner1-Kids-29July2022.jpg" alt="" />
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-6-Banner2-Kids-29July2022.jpg" alt="" />
@@ -242,6 +270,7 @@ const Kids = () => {
         </div>
         <div className='activewear'>
             <h3>Pocket friendly Store</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-9-Banner1-Kids-22June2022.jpg" alt="" />
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modularblock-9-Banner2-Kids-22June2022.jpg" alt="" />
@@ -254,6 +283,7 @@ const Kids = () => {
         </div>
         <div className='activewear'>
             <h3>Shop By Department</h3>
+            <div className='borderdiv' ></div>
             <div>
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modblock11-Banner1-Kids-04March2022A.jpg" alt="" />
                 <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-modblock11-Banner2-Kids-04March2022A.jpg" alt="" />

@@ -5,7 +5,7 @@ import {
   GET_BASKET_SUCCESS,
   remove_BASKET_ITEM,
 } from "./basket.actiontypes";
-import { SIGN_IN } from "./basket.actiontypes";
+import { SIGN_IN,SIGN_OUT } from "./basket.actiontypes";
 
 const initialstate = {
   basket: [],
@@ -30,6 +30,12 @@ export const basketreducer = (state = initialstate, { type, payload }) => {
         isAuth: true,
         user: payload,
       };
+    }
+    case SIGN_OUT:{
+      return {
+        ...state,
+        isAuth:false
+      }
     }
 
     case GET_BASKET_LOADING: {

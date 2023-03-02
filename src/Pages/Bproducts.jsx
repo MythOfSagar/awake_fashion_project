@@ -5,8 +5,7 @@ import Footer from "../Components/Footer/Footer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { womensproduct } from "../redux/action";
-import { useToast } from "@chakra-ui/react";
-const Wproducts = () => {
+const Bproducts = () => {
   // const [price,setprice]=useState('')
   const [pfilter, setpfilter] = useState([]);
   console.log(pfilter);
@@ -14,17 +13,9 @@ const Wproducts = () => {
   const data = useSelector((store) => store.reducer.womens);
   const loading = useSelector((store) => store.loading);
   const dispatch = useDispatch();
-  const toast=useToast()
   // console.log(store)
-
-  const fetchdata=()=>{
-    dispatch(womensproduct())
-  }
-
   useEffect(() => {
-
-    fetchdata()
-   
+    dispatch(womensproduct());
   }, []);
 
   const handlechange = (e) => {
@@ -71,4 +62,4 @@ const Wproducts = () => {
   );
 };
 
-export default Wproducts;
+export default Bproducts;
