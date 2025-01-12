@@ -2,11 +2,14 @@ import { Box, Button, FormControl,useToast ,FormLabel, Heading, Input, Modal, Mo
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 
+
 import { useNavigate } from "react-router-dom"
 import { getRegistration, verifyOtp } from "../../redux/Authorize/action"
 import { getLocalData } from "../../redux/Authorize/Local"
 import { signIn,signOut } from "../../redux/basket_Items/basket.action"
 import { useDispatch, useSelector } from "react-redux";
+
+const API_URL = 'https://fashion-hunter.onrender.com'
 
 export function InitialFocus() {
 
@@ -55,7 +58,7 @@ export function InitialFocus() {
     setLoad(true)
     if (toggle) {
           
-      axios.post("https://handsome-blue-crab.cyclic.app/user/login", {
+      axios.post(`${API_URL}/user/login`, {
         "name": userName,
         "email": email,
         "password": pass,
@@ -111,7 +114,7 @@ export function InitialFocus() {
       
     }
     else {
-      axios.post("https://handsome-blue-crab.cyclic.app/user/verifyotp", {
+      axios.post(`${API_URL}/user/verifyotp`, {
         userID: getLocalData("userID"),
         otp: otp
       })

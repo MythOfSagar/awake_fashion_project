@@ -1,10 +1,12 @@
 import * as types from "./actiontypes"
 import axios from "axios";
 import { getLocalData, saveLocalData } from "./Local";
+const API_URL = 'https://fashion-hunter.onrender.com'
+
 
 export const getRegistration = (data) => (dispatch) => {
     dispatch({ type: types.REGISTRATION_REQUEST })
-    return axios.post("https://handsome-blue-crab.cyclic.app/user/register", data)
+    return axios.post(`${API_URL}/user/register`, data)
         .then((res) => {
              
           
@@ -21,7 +23,7 @@ export const getRegistration = (data) => (dispatch) => {
 
 export const getLogin = (data) => (dispatch) => {
     dispatch({ type: types.LOGIN_REQUEST })
-    return axios.post("https://handsome-blue-crab.cyclic.app/user/login", data)
+    return axios.post(`${API_URL}/user/login`, data)
         .then((res) => {
             
            return dispatch({ type: types.LOGIN_SUCCESS, payload: res.data })
@@ -33,7 +35,7 @@ export const getLogin = (data) => (dispatch) => {
 
 export const verifyOtp = (data) => (dispatch) => {
     dispatch({ type: types.OTP_REQUEST })
-    return axios.post("https://handsome-blue-crab.cyclic.app/user/verifyotp", data)
+    return axios.post(`${API_URL}/user/verifyotp`, data)
         .then((res) => {
             
             console.log(res)
@@ -46,15 +48,3 @@ export const verifyOtp = (data) => (dispatch) => {
            return dispatch({ type: types.OTP_FAILURE })
         })
 }
-
-
-// export const resendOtp = (data) => (dispatch) => {
-//     dispatch({ type: types.OTP_REQUEST })
-//     return axios.post("https://handsome-blue-crab.cyclic.app/user/resendotp", data)
-//         .then((res) => {
-            
-//           return  dispatch({ type: types.OTP_SUCCESS, payload: res.data })
-//         }).catch((err) => {
-//            return dispatch({ type: types.OTP_FAILURE })
-//         })
-// }
